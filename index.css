@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    font-family: sans-serif;
+}
+
+h1 {
+    border-bottom: solid black thin;
+    font-size: 14pt;
+}
+h2 {
+    font-size: 12pt;
+    margin-bottom: 0.2em;
+}
+
+#controls {
+    margin-right: 2em;
+}
+#controls > div {
+    position: relative;
+}
+#controls h1 {
+    font-variant: small-caps;
+    text-align: center;
+}
+#controls button {
+    width: 100%;
+}
+#controls th {
+    white-space: nowrap;
+    text-align: right;
+}
+#controls .sliderLabel {
+    width: 2em;
+    text-align: center;
+    overflow: hidden;
+}
+#controls #playerNames, #controls #forbiddenPairs, #controls #discouragedGroups {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+#controls p {
+    font-size: 10pt;
+    max-width: 305px;
+}
+
+#results {
+    width: 50%;
+}
+#results .conflictScore {
+    font-size: 10pt;
+    font-weight: normal;
+    float: right;
+}
+#results .groups {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#results .groups .group {
+    min-width: 120px;
+}
+#results .groups .group ul {
+    margin-top: 0.2em;
+    padding-left: 20px;
+}
+
+.resultsSummary button {
+    float: right;
+    margin-left: 1em;
+}
+
+input[type=range]::-moz-range-track {
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]:focus::-moz-range-track {
+  background: #ccc;
+}
+
+#hide-help-link {
+    display: none;
+}
+
+.help-text {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    box-sizing: border-box;
+    left: 100%;
+    margin-left: 4px;
+    width: 425px;
+    background-color: white;
+    border: #666 solid thin;
+    padding: 1em;
+    font-size: smaller;
+}
+
+/*
+CSS-only loading spinner
+source: https://stephanwagner.me/only-css-loading-spinner
+*/
+
+@keyframes spinner {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.spinner {
+  position: relative;
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #000;
+  animation: spinner .6s linear infinite;
+}
+
+/*
+Print mode: Something you could hand out to students.
+- Full-width results
+- Hide controls
+- Hide conflict scores
+- Hide results footer (timing and export controls)
+- Avoid splitting round results across multiple pages
+*/
+@media print {
+  #results { width: unset; }
+  #controls { display: none; }
+  .conflictScore { display: none; }
+  .resultsSummary { display: none; }
+  .round { break-inside: avoid; }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nesibe Aydın Gruplandırma</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110301203-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-110301203-1');
+    </script>
+
+    <link rel="stylesheet" href="index.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/immutable@3.8.2/dist/immutable.min.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="controls">
+        <h1>Nesibe Aydın Gruplandırma</h1>
+        <button type="button" id="recomputeButton">Çalıştır</button>
+        <table>
+            <tr>
+                <th>Grup Sayısı</th>
+                <td class="sliderLabel" id="groupsLabel"}>0</td>
+                <td>
+                    <input id="groupsSlider" type="range" min="1" max="50" step="1" value="5"/>
+                </td>
+            </tr>
+            <tr>
+                <th>Grup Başına Kişi Sayısı</th>
+                <td class="sliderLabel" id="ofSizeLabel"}>0</td>
+                <td>
+                    <input id="ofSizeSlider" type="range" min="2" max="15" step="1" value="4"/>
+                </td>
+            </tr>
+            <tr>
+                <th>Round Sayısı</th>
+                <td class="sliderLabel" id="forRoundsLabel"}>0</td>
+                <td>
+                    <input id="forRoundsSlider" type="range" min="1" max="20" step="1" value="5"/>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <div>
+                <strong>Katılımcılar</strong>
+            </div>
+            <div>
+                <textarea id="playerNames" rows="21">
+                    01
+                    02
+                    03
+                    04
+                    05
+                    06
+                    07
+                    08
+                    09
+                    10
+                    11
+                    12
+                    13
+                    14
+                    15
+                    16
+                    17
+                    18
+                    19
+                    20
+                    21
+                    22
+                    23
+                    24
+                    25
+                    26
+                    27
+                    28
+                    29
+                    30
+                    31
+                    32
+                    33
+                    34
+                    35
+                    36
+                    37
+                    38
+                    39
+                    40
+                    41
+                    42
+                    43
+                    44
+                    45
+                    46
+                    47
+                    48
+                    49
+                    50
+                    51
+                    52
+                    53
+                    54
+                    55
+                    56
+                    57
+                    58
+                    59
+                    60
+                    61
+                    62
+                    63
+                    64
+                    65
+                    66
+                    67
+                    68
+                    69
+                    70
+                    71
+                    72
+                    73
+                    74
+                    75
+                    76
+                    78
+                    79
+                    80
+                    81
+                    82
+                    83
+                    84
+                    85
+                    86
+                    87
+                    88
+                    89
+                    90
+                    91
+                    92
+                    93
+                    94
+                    95
+                    96
+                    97
+                    98
+                    99
+                    100
+                    101
+                    102
+                    103
+                    104
+                    105
+                    106
+                    107
+                    108
+                    109
+                    110
+                    111
+                    112
+                    113
+                    114
+                    115
+                    116
+                    117
+                    118
+                    119
+                    120
+</textarea>
+            </div>
+        </div>
+        <div>
+            <div>
+                <strong>Bu kişiler hiçbir zaman bir araya gelmesinler.</strong>
+            </div>
+            <div>
+                <textarea id="forbiddenPairs" rows="6">
+</textarea>
+            </div>
+        </div>
+        <div>
+            <div>
+                <strong>Bu kişiler bir araya getirilmesine önem verilsin.</strong>
+            </div>
+            <div>
+                <textarea id="discouragedGroups" rows="6">
+</textarea>
+            </div>
+        </div>
+        <p>
+            <a href="http://salehsultan.com">Saleh Sultan</a>, 2022
+        </p>
+    </div>
+    <div id="results">
+
+    </div>
+</body>
+</html>
